@@ -1,0 +1,87 @@
+:root {
+    --footer-height: 4rem;
+}
+
+.logotipo {
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.barra-navegacao {
+    background-color: rgb(158, 158, 158);
+    overflow: hidden;
+}
+
+.barra-navegacao > a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    
+}
+
+.barra-navegacao > a:hover {
+    color: blueviolet;
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+    margin-top: 20px;
+    border: 1px solid lightblue;
+    text-align: center;
+}
+
+td.color {
+    background-color: lightblue;
+}
+
+img.center {
+    display: block;
+    margin: 0 auto;
+}
+
+article img {
+    width: 100px;
+    height: 100px;
+    transition: width 200ms, height 300ms;
+}
+
+article img:hover {
+    width: 200px;
+    height: 200px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    color: grey;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding: 1rem 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding-bottom: var(--footer-height);
+}
+
+
+
+@media (max-width: 540px) {
+    .barra-navegacao > a {
+        float: left;
+        width: 100%;
+    }
+}

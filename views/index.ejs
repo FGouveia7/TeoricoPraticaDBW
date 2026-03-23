@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="/CSS/meuEstilo.css" rel="stylesheet">
+    <title>Livraria UMa</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav class="navegacao">
+                <img class="Logotipo" src="/images/news_logo.png" alt="logo livraria uma">
+                <a href="#">HTML-CSS</a>
+                <a href="/BootstrapExm">Bootstrap Grid System</a>
+                <a href="/JavaScriptExm">JavaScript</a>
+                <a href="#livros">Livros</a>
+                <a href="/form">Formulário</a>
+            </nav>
+        </header>
+        <h1>Bem-vindo à Livraria da UMa</h1>
+        <table>
+            <tr>
+                <td class="color"><u>A</u></td>
+                <td></td>
+                <td class="color"><i>É</i></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="color"><b>UMa</b></td>
+                <td></td>
+                <td class="color">Nossa!</td>
+            </tr>
+        </table>
+        <section id="livros">
+            <h2>Livros</h2>
+            <div class="row">
+                <% info.forEach(livro => { %>
+                <article class="col-12 col-md-6 col-lg-4">
+                    <h3><%= livro.titulo %></h3>
+                    <img class="center" src="<%= livro.imagem %>" alt="Capa do <%= livro.titulo %>">
+                    <p><%= livro.text %></p>
+                    <iframe src="https://www.youtube.com/embed/eTFy8RnUkoU" title="<%= livro.titulo %>" allowfullscreen></iframe>
+                    <button>Adicionar carrinho</button>
+                </article>
+                <% }); %>
+            </div>
+        </section>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum necessitatibus modi mollitia. Ipsam quia omnis ipsum, facere laboriosam cumque nostrum impedit aperiam eius, explicabo quisquam earum! Praesentium a nisi fuga.</p>
+    </div>
+    <div>
+        <footer>Universidade da Madeira <span id="anoLetivo"></span></footer>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="/JS/JavaScriptExe.js"></script>
+</body>
+</html>
+

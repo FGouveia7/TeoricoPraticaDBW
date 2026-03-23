@@ -1,0 +1,118 @@
+/**
+ * Estilos partilhados do sítio (navegação, rodapé fixo, tabelas e media queries).
+ * O formulário de comentários usa sobretudo classes do Bootstrap; este ficheiro
+ * complementa o layout global (ex.: espaço inferior para o footer fixo).
+ */
+:root {
+  --footer-height: 4rem;
+}
+
+html, body {
+  margin: 0;
+}
+
+body {
+  padding-bottom: var(--footer-height);
+}
+
+.Logotipo{
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin: 0 20px;
+}
+
+
+.navegacao{
+    background-color: lightgrey;
+    overflow: hidden;
+}
+
+nav>a{
+    float: left;
+    color: black;
+    text-align: center;
+    margin: 14px 30px 16px;
+    text-decoration: none;
+}
+
+nav>a:hover{
+    color: blueviolet;
+}
+
+nav>a:active{
+    color: rgb(217, 185, 247);
+}
+
+table{
+    width: 100%;
+    table-layout: fixed;
+    text-align: center;
+    margin-top: 20px;
+    border: 1px solid lightblue;
+}
+
+td.color{
+    background-color: lightblue;
+}
+
+img.center{
+    display: block;
+    margin: auto;
+}
+
+section#livros>div>article>img{
+    height: 100px;
+    width: 100px;
+    transition: width 200ms, height 400ms;
+}
+
+section#livros>div>article>img:hover{
+    height: 200px;
+    width: 200px;
+}
+
+h1,h2,h3,h4,h5,h6{
+    text-align: center;
+    color: grey;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    box-sizing: border-box;
+}
+
+/*MEDIA QUERIES*/
+/*Despositivos pequenos*/
+@media only screen and (max-width: 540px) {
+    nav>a {
+    float: left; /* HTML elements should float to the left */
+    width: 100%; /* width will ocupy 100% of the window */
+    }
+
+    .Logotipo {
+    display: none; /* logo disapears */
+    }
+
+    table {
+    display: none; /* table disapears */
+    }
+
+    section#livros>div>article>img {
+        height: 100px;
+        width: 100px;
+        transition: none;
+    }
+
+    section#livros>div>article>img:hover {
+        height: 100px;
+        width: 100px;
+    }
+}
